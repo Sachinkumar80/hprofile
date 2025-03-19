@@ -3,6 +3,11 @@ on: workflow_dispatch
 env:
   AWS_REGION: us-east-1
   CONTAINER_NAME: vproapp
+  ECS_SERVICE: vproapp-act-svc 
+  ECS_CLUSTER: vproapp1
+  ECS_TASK_DEFINITION: aws-files/taskdeffile.json
+  ECR_REPOSITORY: hprofile
+
 jobs:
   Testing:
     runs-on: ubuntu-latest
